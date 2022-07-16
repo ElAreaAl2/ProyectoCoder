@@ -290,6 +290,37 @@ main img{
     text-align: justify;
 }
 
+/* animacion circulo */
+.circulo{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    border-radius: 50%;
+
+    /* animacion */
+    animation-name: cambiarColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes cambiarColor {
+
+    0%{
+        background-color: cornflowerblue;
+        transform: translatex(0);
+    }
+
+    100%{
+        background-color: crimson;
+        transform: translatex(100%);
+    }
+}
+
+/* fin de animacion circulo */
+
 /* Incio grid en index */
 
 .main-inicio{
