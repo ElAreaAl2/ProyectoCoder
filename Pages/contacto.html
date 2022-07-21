@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- css -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,32 +17,32 @@
     <!-- tipo grafia nav sub-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto+Mono:wght@100&display=swap"
+        rel="stylesheet">
     <title>Contacto</title>
 </head>
+
 <body>
 
-    <div class="contenedor-principal">
-        <header class="encabezado">
-            <div class="contenedorLogo">
-                <h1> Doctora Tatiana C Duran</h1>
-                <img src="../img/LogoDienteTatianaNegro.png" alt="imagen del logo de la doctora Tatiana">
-            </div>
+    <header class="encabezado container-fluid">
+        <div class="contenedorLogo row">
+            <h1> Doctora Tatiana C Duran</h1>
+            <img src="../img/LogoDienteTatianaNegro.png" alt="imagen del logo de la doctora Tatiana" class="col-4">
+        </div>
 
-            <nav class="menu">
-
+        <div class="row">
+            <nav class="menu col-12">
                 <label for="burguer" class="nav_label">
                     <img src="../img/lista.png" alt="menu vertical" class="burguer_img">
                 </label>
-                
-                <input type="checkbox"  id="burguer" class="burg_input">
+                <input type="checkbox" id="burguer" class="burg_input">
 
                 <ul>
                     <li class="menu__lista">
                         <a href="../index.html"> Inicio </a>
                     </li>
                     <li class="menu__lista">
-                        <a href="doctoraTatiana.html">Doctora Tatiana Castro</a> 
+                        <a href="doctoraTatiana.html">Doctora Tatiana Castro</a>
                     </li>
                     <li class="menu__lista">
                         <a href="galeria.html">Galeria</a>
@@ -50,83 +55,112 @@
                     </li>
                 </ul>
             </nav>
-        </header>
+        </div>
 
-        <main>
-            <form action="" method="">
-                <fieldset>
-                    <legend> Dejanos un mensaje!</legend>
-                    <div>
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" name="nombre" placeholder="Completa tu Nombre">
+    </header>
+
+    <main class="container-fluid">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <legend class="text-center titulo-contacto">Contáctanos</legend>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="fname" name="name" type="text" placeholder="Nombre"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="lname" name="name" type="text" placeholder="Apellidos"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-envelope-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="email" name="email" type="text" placeholder="Correo Electrónico"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="phone" name="phone" type="text" placeholder="Celular"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-pencil-square-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" id="message" name="message"
+                                            placeholder="Ingrese su mensaje para nosotros aquí." rows="7"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
-
-                    <div>
-                        <label for="apellido">Telefono:</label>
-                        <input type="number" name="apellido" placeholder="Telefono">
-                    </div>
-
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" placeholder="Digita tu email" >
-                    </div>
-
-                    <div>
-                        <label for="email">Ciudad:</label>
-                        <input type="email" name="email" placeholder="Digita tu ciudad" >
-                    </div>
-
-                    <div>
-                        <label for="email">País:</label>
-                        <input type="email" name="email" placeholder="Digita tu país" >
-                    </div>
-
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Escribe el motivo de tu consulta."></textarea>
-
-                    <div>
-                        <input type="submit" value="Enviar Formulario">
-                        <input type="reset" value="Limpiar Formulario">
-                    </div>
-                    
-                    <div>
-                        <h2>Horarios de Atencion </h2>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, necessitatibus praesentium rem cumque, doloremque impedit odio magni atque velit.</p>
-                    </div>
-
-                </fieldset>
-
-            </form>
-        </main>
-
-        <footer>
-
-            <div class="logoFooter">
-                <img src="../img/LogoTatianaDuran.png" alt="Logo de la doctora">
+                </div>
             </div>
+        </div>
 
-            <div class="logoEmail">
-                <h3>Atencion al cliente</h3>
-                <img src="../img/email.png" alt="Logo de la doctora">
-            </div>
+    </main>
 
-            <div class="logoRedes1">
-                <img src="../img/instagram.png" alt="Logo de la doctora">
-            </div>
+    <footer>
 
-            <div class="logoRedes2">
-                <img src="../img/facebook.png" alt="Logo de la doctora">
-            </div>
+        <div class="logoFooter">
+            <img src="../img/LogoTatianaDuran.png" alt="Logo de la doctora">
+        </div>
 
-            <div class="logoRedes3">
-                <img src="../img/linkedin.png" alt="Logo de la doctora">
-            </div>
+        <div class="logoEmail">
+            <h3>Atencion al cliente</h3>
+            <img src="../img/email.png" alt="Logo de la doctora">
+        </div>
 
-            <div class="logoRedes4">
-                <img src="../img/whatsapp.png" alt="Logo de la doctora">
-            </div>
+        <div class="logoRedes1">
+            <img src="../img/instagram.png" alt="Logo de la doctora">
+        </div>
 
-        </footer>
-    </div>
+        <div class="logoRedes2">
+            <img src="../img/facebook.png" alt="Logo de la doctora">
+        </div>
+
+        <div class="logoRedes3">
+            <img src="../img/linkedin.png" alt="Logo de la doctora">
+        </div>
+
+        <div class="logoRedes4">
+            <img src="../img/whatsapp.png" alt="Logo de la doctora">
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -748,18 +748,35 @@ form fieldset{
 }
 
 form fieldset legend{
+
     font-weight: bold;
     padding: 15px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 form fieldset div{  
     padding: 2.5px;
     margin: 2.5px;
+    display: flex;
+    justify-content: center;
 }
 
 form fieldset textarea{  
     padding: 5px;
 }
 
+.titulo-contacto {
+    color: #856eb0;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.btn{
+    background-color: #856eb0;
+    border: #856eb0;
+    color: beige;
+}
 
 /* fin contacto */
