@@ -7,21 +7,26 @@
 
 /* estilos de para los 5 html */
 
-.nav_label, .burg_input{
-    display: none;
-}
 
 /* centra los menus del nav con flex */
-.menu ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.menu{
+   display: flex;
+   justify-content: center;
+}
+
+.boton{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logoEmail h3{
     text-align: center;
 }
 
+.logoInicio{
+    display: flex;
+    justify-content: center;
+}
 /* inicio grid para los 5 html */
 .contenedor-principal{
 
@@ -97,7 +102,8 @@ header img{
 }
 
 .menu{
-    border-top: 2px groove beige;    
+    border-top: 2px solid beige;
+    margin-top: 8px;    
 }
 
 
