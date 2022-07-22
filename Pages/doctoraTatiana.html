@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,52 +17,53 @@
     <!-- tipo grafia sub-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto+Mono:wght@100&display=swap"
+        rel="stylesheet">
     <title>Doctora Tatiana Castro</title>
 </head>
+
 <body>
-    
+
     <div class="contenedor-principal">
-            
         <header class="encabezado container-fluid">
             <div class="contenedorLogo row">
                 <h1> Doctora Tatiana C Duran</h1>
                 <a href="../index.html" class="logoInicio">
-                    <img src="../img/LogoDienteTatianaNegro.png" alt="imagen del logo de la doctora Tatiana" class="col-4">
+                    <img src="../img/LogoDienteTatianaNegro.png" alt="imagen del logo de la doctora Tatiana"
+                        class="col-4">
                 </a>
             </div>
-    
-    
             <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid ">
-        
-                    <button class="navbar-toggler boton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler boton" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-    
-                    <div class="collapse navbar-collapse menu" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="menu__lista">
-                                <a href="../index.html"> Inicio </a>
-                            </li>
-                            <li class="menu__lista">
-                                <a href="doctoraTatiana.html">Doctora Tatiana Castro</a>
-                            </li>
-                            <li class="menu__lista">
-                                <a href="galeria.html">Galeria</a>
-                            </li>
-                            <li class="menu__lista">
-                                <a href="procedimientos.html">Procedimientos</a>
-                            </li>
-                            <li class="menu__lista">
-                                <a href="contacto.html">Contacto</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <li class="menu__lista">
+                                    <a href="../index.html">Inicio</a>
+                                </li>
+                                <li class="menu__lista">
+                                    <a href="doctoraTatiana.html">Doctora Tatiana Castro</a>
+                                </li>
+                                <li class="menu__lista">
+                                    <a href="galeria.html">Galeria</a>
+                                </li>
+                                <li class="menu__lista">
+                                    <a href="procedimientos.html">Procedimientos</a>
+                                </li>
+                                <li class="menu__lista">
+                                    <a href="contacto.html">Contacto</a>
+                                </li>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-    
         </header>
 
         <main class="main-doctora">
@@ -74,15 +76,43 @@
                 </div>
                 <div class="contenedorParrafoBloque1">
                     <h2 class="bloque1__titulo1">Deja Tu Sonrisa en mis Manos</h2>
-                    <p class="bloque1__titulo1--sub">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente voluptatum dolor illum ea ipsam nihil cum illo dolores sit dolore laboriosam officia, ullam repellat sunt explicabo quis cumque saepe!</p>
+                    <p class="bloque1__titulo1--sub">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                        sapiente voluptatum dolor illum ea ipsam nihil cum illo dolores sit dolore laboriosam officia,
+                        ullam repellat sunt explicabo quis cumque saepe!</p>
                 </div>
             </div>
 
             <div class="parrafoDoc2">
-                <p class="parrafo-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur quo magnam fugiat tenetur eaque, laudantium dolore ex praesentium maiores odit cum vel voluptatibus minima eligendi porro nemo impedit officiis omnis.</p>
+                <p class="parrafo-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur quo magnam
+                    fugiat tenetur eaque, laudantium dolore ex praesentium maiores odit cum vel voluptatibus minima
+                    eligendi porro nemo impedit officiis omnis.</p>
             </div>
 
-            <div class="imgDoc1">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/galeria3.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/dt2.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/dt3.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- <div class="imgDoc1">
                 <img src="../img/dt1.jpeg" alt="Imagen de procedimiento dental">
             </div>
 
@@ -92,8 +122,8 @@
 
             <div class="imgDoc3">
                 <img src="../img/dt3.jpeg" alt="Imagen de procedimiento dental 2">
-            </div>
-            
+            </div> -->
+
         </main>
 
         <footer>
@@ -131,4 +161,5 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

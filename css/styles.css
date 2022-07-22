@@ -7,13 +7,6 @@
 
 /* estilos de para los 5 html */
 
-
-/* centra los menus del nav con flex */
-.menu{
-   display: flex;
-   justify-content: center;
-}
-
 .boton{
     margin-left: auto;
     margin-right: auto;
@@ -95,17 +88,12 @@ header h1{
 .contenedorLogo{
     display: flex;
     justify-content: center;
+    border-bottom: 2px solid beige;
 }
 
 header img{
     width: 21%;
 }
-
-.menu{
-    border-top: 2px solid beige;
-    margin-top: 8px;    
-}
-
 
 .menu__lista a{
     /* retira el subrayado de los links (a) */
@@ -428,7 +416,7 @@ main img{
     grid-template-areas: "titulo titulo titulo"
                          "bloque bloque bloque"
                          "subti subti subti"
-                         "imagen1 imagen2 imagen3";
+                         "carrusel carrusel carrusel";
 }
 
 .titulo2{
@@ -441,27 +429,10 @@ main img{
     grid-area: subti;
     align-self: center;
 }
-
-.imgDoc1{
-    grid-area: imagen1;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-}
-
-.imgDoc2{
-    grid-area: imagen2;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.imgDoc3{
-    grid-area: imagen3;
-    align-self: center;
-    display: flex;
-    justify-content: center;
+.carousel{
+    grid-area: carrusel;
+    width: 60%;
+    justify-self: center;
 }
 
 /* grid bloque1 */
@@ -492,13 +463,11 @@ main img{
     .main-doctora{
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 0.15fr 1fr 0.15fr 0.65fr 0.65fr 0.65fr;
+        grid-template-rows: auto;
         grid-template-areas: "titulo"
                              "bloque"
                              "subti"
-                             "imagen1"
-                             "imagen2"
-                             "imagen3";
+                             "carrusel";
     }
 
     .bloque1{
@@ -515,13 +484,11 @@ main img{
     .main-doctora{
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 0.15fr 1fr 0.15fr 0.65fr 0.65fr 0.65fr;
+        grid-template-rows: auto;
         grid-template-areas: "titulo"
                              "bloque"
                              "subti"
-                             "imagen1"
-                             "imagen2"
-                             "imagen3";
+                             "carrusel";
     }
 
     .bloque1{
