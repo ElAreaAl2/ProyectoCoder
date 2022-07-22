@@ -112,7 +112,7 @@ header nav ul li{
     transition-duration: .5s;
 }
 
-.menu ul li:hover{
+.menu__lista:hover{
     border-radius: 0.8rem; 
     background-color: beige;
 }
@@ -131,7 +131,7 @@ footer{
 }
 
 .logoFooter img{
-    width: 70%;
+    width: 100%;
 }
 
 .logoEmail img{
@@ -139,30 +139,30 @@ footer{
 }
 
 .logoRedes1 img{
-    width: 30%;
+    width: 40%;
 }
 
 .logoRedes2 img{
-    width: 30%;
+    width: 40%;
 }
 
 .logoRedes3 img{
-    width: 30%;
+    width: 40%;
 }
 
 .logoRedes4 img{
-    width: 30%;
+    width: 40%;
 }
 
 
-/* media queries para tabletas pequenias */
+/* media queries para tabletas pequenias y celulares */
 
 @media screen and (max-width:600px){
 
     footer{
 
         grid-template-rows:  1fr 1fr;
-        grid-template-columns: 1.25fr 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr 1fr;
         grid-template-areas: "email red1 red2"
                              "email red3 red4";
         
@@ -175,12 +175,15 @@ footer{
     .logoEmail{
         text-align: center;
         grid-area: email;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         padding-left: 1rem;
     }
     
     .logoRedes1{
         grid-area: red1;
         justify-content:end;
+        align-self: end;
         padding: 0.25rem;
     }
     
@@ -188,6 +191,7 @@ footer{
         grid-area: red2;
         justify-content: start;
         padding: 0.25rem;
+        align-self: end;
     }
     
     .logoRedes3{
@@ -204,48 +208,8 @@ footer{
         padding: 0.25rem;
     } 
 
-    .burguer_img{
-        width: 5%;
-    }
-
-    .nav_label{
-        
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        display: block;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-    }
-
-    .menu ul{
-        position: fixed;
-        top : 17%;
-        bottom: 0;
-        background: #C0BACB;
-        width: 100%;
-        left: 0;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        clip-path: inset(0 0 100% 0);
-        transition: clip-path 1s ease-in-out;
-    }
-
-    .burg_input:checked + ul{
-        clip-path: inset(1% 0 0 0);
-    }
-
 }
 
-/* para celulares  */
-
-@media screen and (max-width:414px){
-    .menu ul{
-        top : 14%;
-    }
-}
 
 /* fin grid para los 5 html */
 
