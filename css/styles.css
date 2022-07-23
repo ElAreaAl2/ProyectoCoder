@@ -26,10 +26,12 @@
     /* hace que ocupe el 100% del espacio del html */
     height: 100vh;
     display: grid;
-    grid-template-rows: 0.65fr 1fr 0.5fr;
-    /* el grid para columns lo omito porque lo estoy me partiria el main */
+    grid-template-rows: 0.65fr 1fr 0.25fr;
+    /* el grid para columns lo omito porque me colapsa el main */
     /* por facilidad las columns las pienso aplicar a parte en el main y el footer*/
 }
+
+/* grid para el footer */
 
 footer{
     display: grid;
@@ -76,6 +78,14 @@ footer{
     display: flex;
     justify-content: center;
 }
+
+.logoEmail h3{
+    font-size: medium;
+}
+
+/* fin grid footer */
+
+/* En el header use flex como layout */
 
 header{
     background-color: #C0BACB;
@@ -155,9 +165,9 @@ footer{
 }
 
 
-/* media queries para tabletas pequenias y celulares */
+/* media queries para celulares (TODOS LOS HTML) */
 
-@media screen and (max-width:600px){
+@media screen and (max-width:576px){
 
     footer{
 
@@ -210,10 +220,56 @@ footer{
 
 }
 
+@media (max-width:768px) and (min-width:576px){
+    
+    footer{
+
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+        grid-template-areas: "logo email red1 red2"
+                             "logo email red3 red4";
+        
+    }
+}
+
+
+@media(min-width:768px){
+    
+    .logoFooter{  
+        width: 70%;
+        justify-self: center;
+    }
+    
+    .logoEmail{
+        width: 50%;
+        justify-self: center;
+    }
+    
+    .logoRedes1{
+        width: 50%;
+        justify-self: center;
+    }
+    
+    .logoRedes2{
+        width: 50%;
+        justify-self: center;
+    }
+    
+    .logoRedes3{
+        width: 50%;
+        justify-self: center;
+    }
+    
+    .logoRedes4{
+        width: 50%;
+        justify-self: center;
+    } 
+}
 
 /* fin grid para los 5 html */
 
 /* fin de los estilos de para los 5 html */
+
 
 /* index */
 
@@ -248,14 +304,35 @@ main img{
     text-align: justify;
 }
 
+.button {
+	padding: 1rem 1.5rem;
+    margin: 1.5rem;
+    background: whitesmoke;
+    color: black;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 #C0BACB;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 30%;
+}
+
+.button:active {
+	transform: translate(4px, 4px);
+ 	box-shadow: none;
+}
+
 /* Incio grid en index */
 
 .main-inicio{
     display: grid;
     grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.25;
     grid-template-areas: "imagen parrafo1" 
-                         "imagen parrafo2";
+                         "imagen parrafo2"
+                         "imagen boton";
     column-gap: 1rem;
 }
 
@@ -277,18 +354,23 @@ main img{
     grid-area: parrafo2;
 }
 
+.button{
+    grid-area: boton;
+    justify-self: center;
+}
 /* media queries index*/
 
-/* para celulares vertical*/
+/* para celulares vertical (pantanias moviles)*/
 
-@media screen and (max-width:414px){
+@media screen and (max-width:576px){
     
     .main-inicio{
         grid-template-columns: auto;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto;
         grid-template-areas: "imagen " 
                              "parrafo1"
-                             "parrafo2";
+                             "parrafo2"
+                             "boton";
     }
 
     .imagen-inicio{
@@ -312,25 +394,61 @@ main img{
         grid-area: parrafo2;
         text-align: center;
     }
+
+    .button{
+        grid-area:boton;
+    }
 }
 
-/* tabletas pequenias */
+/* tabletas */
 
-@media screen and (max-width:600px){
-    
+@media (max-width:768px) and (min-width:576px){
     .main-inicio{
         grid-template-columns: auto;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto;
         grid-template-areas: "imagen " 
                              "parrafo1"
-                             "parrafo2";
+                             "parrafo2"
+                             "boton";
     }
 
     .imagen-inicio{
         display: flex;
         justify-content: center;
     }
+}
 
+/* tabletas en horizontal y escritorios pequenios */
+
+@media (max-width:992px) and (min-width:768px){
+    .main-inicio{
+        grid-template-columns: 1fr 0.85fr;
+        grid-template-rows: auto;
+        grid-template-areas: "imagen parrafo1"
+                             "imagen parrafo2"
+                             "boton boton";
+    }
+
+    .imagen-inicio{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .parrafo1-inicio{
+        margin-right: 1rem;
+    }
+
+    .parrafo2-inicio{
+        margin-right: 1rem;
+    }
+}
+
+/* pantallas extra largas */
+@media (min-width:1440px){
+    .button{
+        width: 20%;
+    }    
 }
 
 /* fin grid en index */
