@@ -220,7 +220,9 @@ footer{
 
 }
 
-@media (max-width:768px) and (min-width:576px){
+/* tabletas */
+
+@media (max-width: 991px) and (min-width:576px){
     
     footer{
 
@@ -232,6 +234,7 @@ footer{
     }
 }
 
+/* desde tableta hasta escritorio iconos del footer mas pequenios */
 
 @media(min-width:768px){
     
@@ -345,11 +348,10 @@ main img{
 .parrafo1-inicio{
     padding: 1.5rem;
     grid-area: parrafo1;
+    border-bottom: 2px groove;
 }
 
 .parrafo2-inicio{
-    border-top: 2px groove;
-    margin-right: 1rem;
     padding: 1.5rem;
     grid-area: parrafo2;
 }
@@ -382,14 +384,13 @@ main img{
     
     .parrafo1-inicio{
         padding: 1rem;
-        margin-right: 1rem;
+        padding-right: 1rem;
         grid-area: parrafo1;
         text-align: center;
     }
     
     .parrafo2-inicio{
-        border-top: 2px groove;
-        margin-right: 1rem;
+        padding-right: 1rem;
         padding: 1rem;
         grid-area: parrafo2;
         text-align: center;
@@ -402,7 +403,7 @@ main img{
 
 /* tabletas */
 
-@media (max-width:768px) and (min-width:576px){
+@media (max-width:991px) and (min-width:576px){
     .main-inicio{
         grid-template-columns: auto;
         grid-template-rows: auto;
@@ -418,15 +419,15 @@ main img{
     }
 }
 
-/* tabletas en horizontal y escritorios pequenios */
+/* escritorios */
 
-@media (max-width:992px) and (min-width:768px){
+@media (min-width:992px){
     .main-inicio{
         grid-template-columns: 1fr 0.85fr;
         grid-template-rows: auto;
         grid-template-areas: "imagen parrafo1"
                              "imagen parrafo2"
-                             "boton boton";
+                             "imagen boton";
     }
 
     .imagen-inicio{
@@ -442,12 +443,10 @@ main img{
     .parrafo2-inicio{
         margin-right: 1rem;
     }
-}
 
-/* pantallas extra largas */
-@media (min-width:1440px){
     .button{
-        width: 20%;
+        width: 40%;
+        height: 40%;
     }    
 }
 
@@ -540,8 +539,10 @@ main img{
 }
 
 /* media queries Doctora Tatiana */
-/* celulares verticales */
-@media screen and (max-width:414px){
+
+
+/* celulares*/
+@media screen and (max-width:576px){
     .main-doctora{
         display: grid;
         grid-template-columns: auto;
@@ -559,10 +560,15 @@ main img{
         grid-template-areas: "imgBloc"
                              "parrBloc";
     }
+
+    .carousel{
+        width: 90%;     
+    }
+
 }
 
-/* tabletas pequenias */
-@media screen and (max-width:600px){
+/* tabletas */
+@media (max-width:991px) and (min-width:576px){
     .main-doctora{
         display: grid;
         grid-template-columns: auto;
@@ -580,7 +586,13 @@ main img{
         grid-template-areas: "imgBloc"
                              "parrBloc";
     }
+
+    .carousel{
+        width: 90%;     
+    }
 }
+
+/* escritorio, no usare media queries para esta page */
 
 /* Fin grid doctoraTatiana */
 
